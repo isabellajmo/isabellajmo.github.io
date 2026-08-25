@@ -10,7 +10,7 @@
 
   <div class="container">
     <header>
-      <h1>Jane Doe</h1>
+      <h1>Isabella Mo</h1>
       <p>Electrical Engineering Portfolio</p>
       
       <!-- Contact & Social Links -->
@@ -22,7 +22,7 @@
 
     <!-- Category Filter Tabs -->
     <div class="tab-container">
-      <button class="tab-btn active" onclick="filterProjects('all')">All Projects</button>
+      <button class="tab-btn active" onclick="filterProjects('About')">About</button>
       <button class="tab-btn" onclick="filterProjects('FIR Filter')">Optimized FIR Filter for MEMS Microphone Sensing Applications</button>
       <button class="tab-btn" onclick="filterProjects('Sensors')">Sensors for Aircraft Lifting Surfaces</button>
       <button class="tab-btn" onclick="filterProjects('Matrix')">Matrix Multiplication Accelerator</button>
@@ -91,20 +91,5 @@
 
     </div>
   </div>
-
-  <script>
-    function filterProjects(category) {
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-
-      document.querySelectorAll('.project-card').forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-  </script>
 </body>
 </html>
