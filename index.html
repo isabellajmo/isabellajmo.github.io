@@ -111,11 +111,13 @@
     </div>
   </div>
 
-  <script>
+    <script>
     function filterProjects(category) {
+      // Update active tab button style
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-
+      if (event) event.target.classList.add('active');
+  
+      // Show/hide cards based on category
       document.querySelectorAll('.project-card').forEach(card => {
         if (card.dataset.category === category) {
           card.style.display = 'flex';
@@ -124,6 +126,11 @@
         }
       });
     }
+  
+    // Set 'about' as default view on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      filterProjects('about');
+    });
   </script>
 </body>
 </html>
