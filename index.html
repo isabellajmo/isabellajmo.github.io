@@ -197,16 +197,12 @@
   </div>
 
     <script>
-    function filterProjects(category, event) {
-      // 1. Update tab button active states
+    function filterProjects(category) {
+      // Update active tab button style
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      
-      // If triggered by a button click, highlight that button
-      if (event && event.target) {
-        event.target.classList.add('active');
-      }
+      if (event) event.target.classList.add('active');
   
-      // 2. Filter card visibility
+      // Show/hide cards based on category
       document.querySelectorAll('.project-card').forEach(card => {
         if (card.dataset.category === category) {
           card.style.display = 'flex';
@@ -216,7 +212,7 @@
       });
     }
   
-    // 3. Force 'about' view as soon as HTML is loaded
+    // Set 'about' as default view on page load
     document.addEventListener('DOMContentLoaded', () => {
       filterProjects('about');
     });
