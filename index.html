@@ -5,31 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Engineering Portfolio</title>
 
-  <!-- Link your external CSS file here -->
+  <!-- Link external stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Your website content goes here -->
+  <div class="container">
+    <header>
+      <h1>Engineering Portfolio</h1>
+      <p>Research Projects & Presentations</p>
+    </header>
+
+    <div class="projects-grid">
+      
+      <!-- PDF Project Card -->
+      <article class="project-card">
+        <div class="pdf-container">
+          <object data="assets/pdfs/research-poster.pdf" type="application/pdf">
+            <p>Your browser doesn't support PDF previews. 
+               <a href="assets/pdfs/research-poster.pdf" target="_blank">Download PDF Report</a>
+            </p>
+          </object>
+        </div>
+        <div class="project-content">
+          <h2 class="project-title">Design Optimization Research Poster</h2>
+          <div class="card-actions">
+            <a href="assets/pdfs/research-poster.pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Video Presentation Card -->
+      <article class="project-card">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+        </div>
+        <div class="project-content">
+          <h2 class="project-title">Senior Design Presentation</h2>
+        </div>
+      </article>
+
+    </div>
+  </div>
 
 </body>
 </html>
-
-<section class="project">
-  <h2>Design Optimization Research Poster</h2>
-  <object data="assets/pdfs/research-poster.pdf" type="application/pdf" width="100%" height="500px">
-    <p>Your browser doesn't support PDF previews. 
-       <a href="assets/pdfs/research-poster.pdf" target="_blank">Download PDF Report</a>
-    </p>
-  </object>
-</section>
-
-<section class="project">
-  <h2>Senior Design Presentation</h2>
-  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-            frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
-
