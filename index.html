@@ -11,32 +11,32 @@
   <div class="container">
     <header>
       <h1>Jane Doe</h1>
-      <p>Mechanical & Systems Engineering Portfolio</p>
+      <p>Electrical Engineering Portfolio</p>
       
       <!-- Contact & Social Links -->
       <div style="margin-top: 1rem; display: flex; gap: 1rem;">
-        <a href="mailto:your.email@example.com" class="btn btn-secondary">Email Me</a>
-        <a href="https://linkedin.com/in/yourprofile" class="btn btn-secondary" target="_blank">LinkedIn</a>
-        <a href="https://github.com/yourusername" class="btn btn-secondary" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/isabella-mo" class="btn btn-secondary" target="_blank">LinkedIn</a>
+        <a href="https://github.com/isabellajmo" class="btn btn-secondary" target="_blank">GitHub</a>
       </div>
     </header>
 
     <!-- Category Filter Tabs -->
     <div class="tab-container">
       <button class="tab-btn active" onclick="filterProjects('all')">All Projects</button>
-      <button class="tab-btn" onclick="filterProjects('mechanical')">Mechanical</button>
-      <button class="tab-btn" onclick="filterProjects('research')">Research</button>
+      <button class="tab-btn" onclick="filterProjects('FIR Filter')">Optimized FIR Filter for MEMS Microphone Sensing Applications</button>
+      <button class="tab-btn" onclick="filterProjects('Sensors')">Sensors for Aircraft Lifting Surfaces</button>
+      
     </div>
 
     <!-- Projects Grid -->
     <div class="projects-grid">
       
       <!-- PDF Research Card -->
-      <article class="project-card" data-category="research">
+      <article class="project-card" data-category="FIR Filter">
         <div class="pdf-container">
-          <object data="assets/pdfs/research-poster.pdf" type="application/pdf">
+          <object data="assets/pdfs/Isabella_Mo_BE-STARSE_Final_Report.pdf" type="application/pdf">
             <p>Your browser doesn't support PDF previews. 
-               <a href="assets/pdfs/research-poster.pdf" target="_blank">Download PDF Report</a>
+               <a href="assets/pdfs/Isabella_Mo_BE-STARSE_Final_Report.pdf" target="_blank">Download PDF Report</a>
             </p>
           </object>
         </div>
@@ -45,18 +45,19 @@
           
           <!-- Tech Tags -->
           <div class="tag-container">
-            <span class="tag">FEA</span>
-            <span class="tag">ANSYS</span>
-            <span class="tag">SolidWorks</span>
+            <span class="tag">Verilog</span>
+            <span class="tag">Quartus Prime</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">ModelSim</span>
           </div>
           
           <!-- Description -->
           <p class="project-description">
-            Finite element analysis and topological optimization study on aerospace bracket geometry to reduce weight while preserving structural integrity.
+            A custom low-power digital bandpass Finite Impulse Response (FIR) filter designed in Verilog to isolate airflow frequencies (10-13 kHz) detected by an analog MEMS microphone during wind tunnel testing.
           </p>
 
           <div class="card-actions">
-            <a href="assets/pdfs/research-poster.pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
+            <a href="assets/pdfs/Isabella_Mo_BE-STARSE_Poster.pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
           </div>
         </div>
       </article>
