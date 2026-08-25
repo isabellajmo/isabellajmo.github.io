@@ -4,58 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Engineering Portfolio</title>
-
-  <!-- Link external stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
-
-<script>
-function filterProjects(category) {
-  // Update active button styling
-  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
-
-  // Show/Hide cards
-  document.querySelectorAll('.project-card').forEach(card => {
-    if (category === 'all' || card.dataset.category === category) {
-      card.style.display = 'flex';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-</script>
-  
 <body>
 
   <div class="container">
     <header>
-      <h1>Engineering Portfolio</h1>
-      <p>Research Projects & Presentations</p>
+      <h1>Jane Doe</h1>
+      <p>Mechanical & Systems Engineering Portfolio</p>
+      
+      <!-- Contact & Social Links -->
+      <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+        <a href="mailto:your.email@example.com" class="btn btn-secondary">Email Me</a>
+        <a href="https://linkedin.com/in/yourprofile" class="btn btn-secondary" target="_blank">LinkedIn</a>
+        <a href="https://github.com/yourusername" class="btn btn-secondary" target="_blank">GitHub</a>
+      </div>
     </header>
 
-    <!-- Tab Filter Buttons -->
+    <!-- Category Filter Tabs -->
     <div class="tab-container">
       <button class="tab-btn active" onclick="filterProjects('all')">All Projects</button>
       <button class="tab-btn" onclick="filterProjects('mechanical')">Mechanical</button>
       <button class="tab-btn" onclick="filterProjects('research')">Research</button>
     </div>
-    
-    <!-- Project Grid -->
-    <div class="projects-grid">
-      <article class="project-card" data-category="research">
-        <!-- Research Project Content -->
-      </article>
-    
-      <article class="project-card" data-category="mechanical">
-        <!-- Mechanical Project Content -->
-      </article>
-    </div>
 
+    <!-- Projects Grid -->
     <div class="projects-grid">
       
-      <!-- PDF Project Card -->
-      <article class="project-card">
+      <!-- PDF Research Card -->
+      <article class="project-card" data-category="research">
         <div class="pdf-container">
           <object data="assets/pdfs/research-poster.pdf" type="application/pdf">
             <p>Your browser doesn't support PDF previews. 
@@ -65,6 +42,19 @@ function filterProjects(category) {
         </div>
         <div class="project-content">
           <h2 class="project-title">Design Optimization Research Poster</h2>
+          
+          <!-- Tech Tags -->
+          <div class="tag-container">
+            <span class="tag">FEA</span>
+            <span class="tag">ANSYS</span>
+            <span class="tag">SolidWorks</span>
+          </div>
+          
+          <!-- Description -->
+          <p class="project-description">
+            Finite element analysis and topological optimization study on aerospace bracket geometry to reduce weight while preserving structural integrity.
+          </p>
+
           <div class="card-actions">
             <a href="assets/pdfs/research-poster.pdf" class="btn btn-secondary" target="_blank">Download PDF</a>
           </div>
@@ -72,17 +62,47 @@ function filterProjects(category) {
       </article>
 
       <!-- Video Presentation Card -->
-      <article class="project-card">
+      <article class="project-card" data-category="mechanical">
         <div class="video-container">
           <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
         </div>
         <div class="project-content">
           <h2 class="project-title">Senior Design Presentation</h2>
+          
+          <!-- Tech Tags -->
+          <div class="tag-container">
+            <span class="tag">Robotics</span>
+            <span class="tag">C++</span>
+            <span class="tag">Control Systems</span>
+          </div>
+          
+          <!-- Description -->
+          <p class="project-description">
+            Capestone project presentation covering the electromechanical architecture and dynamic modeling of an autonomous mobile platform.
+          </p>
+
+          <div class="card-actions">
+            <a href="https://github.com/yourusername/capstone-repo" class="btn btn-primary" target="_blank">View Code</a>
+          </div>
         </div>
       </article>
 
     </div>
   </div>
 
+  <script>
+    function filterProjects(category) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      document.querySelectorAll('.project-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
